@@ -1,0 +1,7 @@
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\bin\Debug\DataAccess.dll
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\bin\Debug\DataAccess.pdb
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\bin\Debug\BLModels.dll
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\bin\Debug\BLModels.pdb
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\obj\Debug\DataAccess.dll
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\DataAccess\obj\Debug\DataAccess.pdb

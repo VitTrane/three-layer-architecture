@@ -1,0 +1,5 @@
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\BLModels\bin\Debug\BLModels.dll
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\BLModels\bin\Debug\BLModels.pdb
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\BLModels\obj\Debug\BLModels.csprojResolveAssemblyReference.cache
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\BLModels\obj\Debug\BLModels.dll
+E:\My\Labs\Epam\Vitalii_Korunov_LINQ\BLModels\obj\Debug\BLModels.pdb
