@@ -42,6 +42,17 @@ namespace Logic
         }
 
         /// <summary>
+        /// Возвращает клиента
+        /// </summary>
+        /// <param name="id">Id клиента</param>
+        /// <returns></returns>
+        public Customer GetCustomer(int id) 
+        {
+            Customer customer = GetAllCustomers().FirstOrDefault(c => c.Id == id);
+            return customer;
+        }
+
+        /// <summary>
         /// Возвращает клиентов банка
         /// </summary>
         /// <param name="bankName">Название банка</param>
@@ -72,19 +83,32 @@ namespace Logic
         /// <param name="customer">Клиент, которого нужно добавить</param>
         public void AddCustomer(Customer customer) 
         {
-            _banks[customer.BankName].Customers.Add(customer);
-            DataAccess.Create(customer);
+            if (_banks.ContainsKey(customer.BankName))
+            {
+                _banks[customer.BankName].Customers.Add(customer);
+                DataAccess.Create(customer);
+            }
         }
 
         /// <summary>
         /// Обновляет клиента
         /// </summary>
-        /// <param name="oldCustomer">Клиент, у которого нужно было обновить информацию</param>
-        /// <param name="updatedCustomer">Клиент после обновления информации</param>
-        public void UpdateCustomer(Customer oldCustomer, Customer updatedCustomer) 
+        /// <param name="id">Id клиента</param>
+        public void UpdateCustomer(Customer updatedCustomer)
         {
-            DeleteCustomer(oldCustomer);
+            DeleteCustomer(updatedCustomer.Id);
             AddCustomer(updatedCustomer);
+        }
+
+        /// <summary>
+        /// Удаляет клиента
+        /// </summary>
+        /// <param name="id">Id клиента</param>
+        public void DeleteCustomer(int id)
+        {
+            Customer customer = GetCustomer(id);
+            _banks[customer.BankName].Customers.Remove(customer);
+            DataAccess.Delete(customer);
         }
 
         /// <summary>

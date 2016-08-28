@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BLModels.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customer</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateCustomer")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BankName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patronymic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBirth)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BankName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patronymic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateBirth)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCustomer", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", item)
+        </td>
+    </tr>
+}
+
+</table>

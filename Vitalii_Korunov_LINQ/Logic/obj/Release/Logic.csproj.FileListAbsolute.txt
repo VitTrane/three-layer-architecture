@@ -1,0 +1,9 @@
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\Logic.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\Logic.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\BLModels.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\DataAccess.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\BLModels.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Release\DataAccess.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Release\Logic.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Release\Logic.pdb

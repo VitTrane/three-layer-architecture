@@ -94,7 +94,7 @@ namespace UI
                 CustomerInfoForm cutomerInfoForm = new CustomerInfoForm(banksLogic.GetNamesBanks(), selectedCustomer);
                 if (cutomerInfoForm.ShowDialog() == DialogResult.OK)
                 {
-                    Customer updateCustomer = new Customer(cutomerInfoForm.FullName, cutomerInfoForm.DateBirth, cutomerInfoForm.BankName);
+                    Customer updateCustomer = new Customer(selectedCustomer.Id,cutomerInfoForm.FullName, cutomerInfoForm.DateBirth, cutomerInfoForm.BankName);
 
                     customersListView.Items[selectedItem.Index].Tag = updateCustomer;
                     customersListView.Items[selectedItem.Index].Text = updateCustomer.SecondName;
@@ -105,7 +105,7 @@ namespace UI
 
                     _customers.Add(updateCustomer);
                     _customers.Remove(selectedCustomer);
-                    banksLogic.UpdateCustomer(selectedCustomer,updateCustomer);
+                    banksLogic.UpdateCustomer(updateCustomer);
                 }
             }
         }

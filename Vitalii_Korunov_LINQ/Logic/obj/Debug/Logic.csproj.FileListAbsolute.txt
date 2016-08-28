@@ -7,3 +7,12 @@ E:\My\Labs\Epam\Vitalii_Korunov_LINQ\Logic\bin\Debug\DataAccess.pdb
 E:\My\Labs\Epam\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
 E:\My\Labs\Epam\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.dll
 E:\My\Labs\Epam\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\Logic.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\Logic.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\BLModels.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\DataAccess.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\BLModels.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\bin\Debug\DataAccess.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\Logic\obj\Debug\Logic.pdb

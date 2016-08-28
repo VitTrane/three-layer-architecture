@@ -11,8 +11,9 @@ namespace Repository
 {
     public class DataAccess
     {        
-        private static string _pathInputFile = "input.txt";
-        private static string _pathOutputFile = "output.xml";
+        private static int id = 0;
+        private static string _pathInputFile = AppDomain.CurrentDomain.BaseDirectory + "input.txt";
+        private static string _pathOutputFile = AppDomain.CurrentDomain.BaseDirectory + "output.xml";
 
         /// <summary>
         /// Добавляет клиента в файл
@@ -22,11 +23,13 @@ namespace Repository
         {
             using (TextWriter writer = new StreamWriter(_pathInputFile, true, Encoding.Default))
             {
-                string info = String.Format("{0}: {1} {2} {3}, {4}", 
-                    customer.BankName, customer.SecondName,
+                id++;
+                customer.Id = id;
+                string info = String.Format("{0}:{1}: {2} {3} {4}, {5}", 
+                    customer.Id, customer.BankName, customer.SecondName,
                     customer.Name, customer.Patronymic, customer.DateBirth.ToShortDateString());
 
-                writer.WriteLine(info);
+                writer.WriteLine(info);                
             }
         }
 
@@ -42,16 +45,18 @@ namespace Repository
                 foreach (var line in lines)
                 {
                     string[] info = line.Split(':', ',');
-                    string nameBank = info[0];
+                    int customerId = int.Parse(info[0]);
+                    string nameBank = info[1];
                     if (!_banks.ContainsKey(nameBank))
                     {
                         _banks.Add(nameBank, new Bank(nameBank));
-                        _banks[nameBank].Customers.Add(new Customer(info[1], DateTime.Parse(info[2]), nameBank));
+                        _banks[nameBank].Customers.Add(new Customer(customerId,info[2], DateTime.Parse(info[3]), nameBank));
                     }
                     else
                     {
-                        _banks[nameBank].Customers.Add(new Customer(info[1], DateTime.Parse(info[2]), nameBank));
+                        _banks[nameBank].Customers.Add(new Customer(customerId,info[2], DateTime.Parse(info[3]), nameBank));
                     }
+                    id = customerId;
                 }
             }
             catch (Exception)
@@ -67,7 +72,7 @@ namespace Repository
         /// </summary>
         /// <param name="updatedCustomer">Клиент, у которого обновили информацию</param>
         public static void Update(Customer updatedCustomer) 
-        {
+        {            
             Create(updatedCustomer);
         }
 
@@ -78,23 +83,25 @@ namespace Repository
         public static void Delete(Customer customer) 
         {
             string[] lines = ReadFile();
-            string info;
-            if (!String.IsNullOrWhiteSpace(customer.Patronymic))
-            {
-                info = String.Format("{0}: {1} {2} {3}, {4}",
-                    customer.BankName, customer.SecondName,
-                    customer.Name, customer.Patronymic, customer.DateBirth.ToShortDateString());
-            }
-            else 
-            {
-                info = String.Format("{0}: {1} {2}, {3}",
-                    customer.BankName, customer.SecondName,
-                    customer.Name, customer.DateBirth.ToShortDateString());
-            }
+            //string info;
+            //if (!String.IsNullOrWhiteSpace(customer.Patronymic))
+            //{
+            //    info = String.Format("{0}:{1}: {2} {3} {4}, {5}",
+            //        customer.Id, customer.BankName, customer.SecondName,
+            //        customer.Name, customer.Patronymic, customer.DateBirth.ToShortDateString());
+            //}
+            //else 
+            //{
+            //    info = String.Format("{0}:{1}: {1} {2}, {3}",
+            //        customer.Id, customer.BankName, customer.SecondName,
+            //        customer.Name, customer.DateBirth.ToShortDateString());
+            //}
 
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(_pathInputFile, false, Encoding.Default))
             {
-                string[] updateInfo = lines.Where(x=>!x.Contains(info)).ToArray();
+                int id = customer.Id;
+                //string[] updateInfo = lines.Where(x=>!x.Contains(info)).ToArray();
+                string[] updateInfo = lines.Where(x => !x.StartsWith(id.ToString())).ToArray();
                 foreach (var str in updateInfo)
                 {
                     file.WriteLine(str);
@@ -125,7 +132,6 @@ namespace Repository
             {
                 Console.WriteLine("При чтении файла произошла ошибка");
             }
-
             return lines.ToArray();
         }
 

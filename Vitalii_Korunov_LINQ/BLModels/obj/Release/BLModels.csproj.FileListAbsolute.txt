@@ -1,0 +1,5 @@
+E:\My\Labs\Vitalii_Korunov_LINQ\BLModels\bin\Release\BLModels.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\BLModels\bin\Release\BLModels.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\BLModels\obj\Release\BLModels.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\BLModels\obj\Release\BLModels.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\BLModels\obj\Release\BLModels.csprojResolveAssemblyReference.cache

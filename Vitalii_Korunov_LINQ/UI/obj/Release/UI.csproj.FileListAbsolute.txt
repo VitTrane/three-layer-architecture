@@ -1,0 +1,17 @@
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\UI.exe.config
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\UI.exe
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\UI.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\BLModels.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\Logic.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\DataAccess.dll
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\BLModels.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\Logic.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\bin\Release\DataAccess.pdb
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.csprojResolveAssemblyReference.cache
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.CustomerInfoForm.resources
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.FilterForm.resources
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.Form1.resources
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.Properties.Resources.resources
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.csproj.GenerateResource.Cache
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.exe
+E:\My\Labs\Vitalii_Korunov_LINQ\UI\obj\Release\UI.pdb

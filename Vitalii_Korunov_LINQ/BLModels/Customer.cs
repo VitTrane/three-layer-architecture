@@ -9,12 +9,19 @@ namespace BLModels
     [Serializable]
     public class Customer
     {
+        private int _id;        
         private string _name;
         private string _secondName;
         private string _patronymic;
         private int _age;
         private DateTime _dateBirth;
         private string _bankName;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         public string BankName
         {
@@ -79,12 +86,23 @@ namespace BLModels
             CalculateAge(dateBirth);
         }
 
-        public Customer(string secondName, string name, string patronymic, DateTime dateBirth)
+        public Customer(int id, string fullName, DateTime dateBirth, string bankName)
         {
+            SplitFullName(fullName);
+            _id = id;
+            _dateBirth = dateBirth;
+            _bankName = bankName;
+            CalculateAge(dateBirth);
+        }
+
+        public Customer(int id, string secondName, string name, string patronymic, DateTime dateBirth, string bankName)
+        {
+            _id = id;
             _name = name;
             _secondName = secondName;
             _patronymic = patronymic;
             _dateBirth = dateBirth;
+            _bankName = bankName;
             CalculateAge(dateBirth);
         }
 
